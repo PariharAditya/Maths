@@ -12,7 +12,7 @@ static List<List<Integer>> subsets(int[] nums)
 {
 Arrays.sort(nums);
 List<List<Integer>> answer = new ArrayList<List<Integer>>();
-int xor = 0;
+
 //determining total subset that can be formed
 int possibleSet = 1<<nums.length;
 for (int i = 0; i < possibleSet; i++) 
@@ -20,7 +20,7 @@ for (int i = 0; i < possibleSet; i++)
 List<Integer> pair = new ArrayList<Integer>();
 for (int j = 0; j < nums.length; j++) 
 {
-if ((xor^nums[j])==0) pair.add(nums[j]);
+if ((1&(i>>>j))==1) pair.add(nums[j]);
 }
 ans.add(pair); 
 }   
