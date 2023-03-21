@@ -23,3 +23,12 @@ whenZeroStreakBreak+=count;
 return whenZeroStreakBreak;
 }    
 }
+/*long cnt = 0;
+        int n = nums.length, j = -1;
+        for(int i=0;i<n;i++) {
+            if(nums[i] != 0) j=i;
+            else {
+                cnt += i-j;
+            }
+        }
+        return cnt; */
